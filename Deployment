@@ -1,0 +1,9 @@
+git clone 
+cd eks-basics
+kubectl apply -f ./nginx-svc.yaml
+kubectl apply of ./nginx-deployment.yaml
+kubectl get deployment
+kubectl get pod
+kubectl get node
+kubectl get rs
+curl lblink
