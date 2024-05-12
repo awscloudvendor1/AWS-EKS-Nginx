@@ -1,5 +1,9 @@
+eksctl create cluster --name cluster-1 --region us-west-2 --nodegroup-name standard-workers --node-type t2.large --nodes 3 --nodes-min 1 --nodes-max 4 --managed
 git clone 
 cd eks-basics
+eksctl create cluster --name cluster-1 --region us-west-2 --nodegroup-name standard-workers --node-type t2.large --nodes 3 --nodes-min 1 --nodes-max 4 --managed
+eksctl get cluster
+aws eks update-kubeconfig --name cluster-1 --region us-west-2
 kubectl apply -f ./nginx-svc.yaml
 kubectl apply of ./nginx-deployment.yaml
 kubectl get deployment
@@ -7,3 +11,4 @@ kubectl get pod
 kubectl get node
 kubectl get rs
 curl lblink
+
